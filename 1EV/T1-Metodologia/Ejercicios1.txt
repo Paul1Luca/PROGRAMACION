@@ -1,0 +1,136 @@
+Programa: N y Z
+Entorno: 
+	N, Z son numéricos enteros
+Algoritmo:
+	escribir "Introduce dos números"
+	leer N, Z
+	if (N%Z = 0)
+		escribir "Los números son múltiplos"
+	else
+		escribir "Los números no son múltiplos"
+	endif
+
+FinPrograma
+------------------------------------------------------------------
+Programa: A y B
+Entorno: 
+	A, B son numéricos enteros
+Algoritmo:
+	escribir "Introduce dos números"
+	leer A, B
+	if (A%B = 0)
+		escribir "El primer número divide exactamente al segundo"
+	else if (B%A = 0)
+			escribir "El segundo número divide exactamente al primero"
+		else
+			escribir "No se dividen exactamente los números"
+		endif
+	endif
+
+FinPrograma
+------------------------------------------------------------------
+Programa: A, B, C
+Entorno: 
+	A, B, C son numéricos enteros
+Algoritmo:
+	escribir "Introduce tres números"
+	leer A, B, C
+	if (A < B && A > C)
+		escribir "A es central"
+	else if (B < A && B > C)
+			escribir "B es central"
+		else
+			escribir "C es central"
+		endif
+	endif
+
+FinPrograma
+------------------------------------------------------------------
+Programa: Zodiaco
+Entorno: 
+	
+Algoritmo:
+	escribir "Itroduce tu mes y dia de cumpleaños"
+	leer MES, DIA
+	if ()
+		
+	else if()
+		
+	else
+
+FinPrograma
+------------------------------------------------------------------
+Programa: Suma/Mayor/Menor
+Entorno: 
+	N, SUMA, MAYOR, MENOR son numéricos reales
+Algoritmo:
+	N = 1
+	SUMA = 0
+	MAYOR = 0
+	do
+		escribir "Introduce tantos numeros como quieras. Al terminar, introduce un cero"
+		leer N
+		SUMA = N + SUMA
+		if (N > MAYOR)
+			MAYOR = N
+		else
+			MENOR = N
+		endif
+	while (N != 0)
+	escribir "La suma de todo da " SUMA ", el mayor es " MAYOR " y el menor " MENOR
+
+FinPrograma
+------------------------------------------------------------------
+Programa: Fibonnacci
+Entorno: 
+	A, B son numéricos enteros
+Algoritmo:
+	A = 1
+	B = 1
+	escribir A
+	do
+		B = A + B
+		A = B - A
+		escribir B
+	while (A != 0)
+
+FinPrograma
+------------------------------------------------------------------
+Programa: Pirámides
+Entorno: 
+	
+Algoritmo:
+	escribir "Introduce un número"
+	leer N1
+	N2 = N1
+	CONTADOR = 0
+	NUM = 1
+	do
+		do
+			escribir NUM
+			if(NUM == 0)
+				NUM++
+			else
+				NUM--
+			endif
+			CONTADOR++
+		while(CONTADOR < N1)
+		escribir "\n"
+		N1--
+		CONTADOR = 0
+	while (N1 != 0)
+
+
+	NUM = 1
+	do
+		escribir NUM
+		if(NUM = 0)
+			NUM++
+		else
+			NUM--
+		endif
+		CONTADOR--
+	while(CONTADOR != 0)
+
+FinPrograma
+------------------------------------------------------------------

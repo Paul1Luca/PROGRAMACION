@@ -1,0 +1,256 @@
+Programa: Promedio (DO WHILE)
+Entorno: 
+	CONTADOR es numérico entero
+	NOTA, FINAL, TOTALNOTA, MEDIA son numéricos reales
+Algoritmo:
+	CONTADOR = 1
+	FINAL = 0
+	do
+		escribir "Intoduce nota"
+		leer NOTA
+		calcular TOTALNOTA = NOTA + FINAL
+		FINAL = TOTALNOTA
+		CONTADOR++
+	while (CONTADOR < 8)
+	calcular MEDIA = TOTALNOTA / 7
+	escribir "La media es de " + MEDIA
+
+FinPrograma
+----------------
+Programa: Promedio (FOR)
+Entorno: 
+	CONTADOR es numérico entero
+	NOTA, FINAL, TOTALNOTA, MEDIA son numéricos reales
+Algoritmo:
+	for (CONTADOR = 1, FINAL = 0 ; CONTADOR < 8 ; CONTADOR++)
+		escribir "Intoduce nota"
+		leer NOTA
+		calcular TOTALNOTA = NOTA + FINAL
+		FINAL = TOTALNOTA
+	endfor
+	calcular MEDIA = TOTALNOTA / 7
+	escribir "La media es de " + MEDIA
+
+FinPrograma
+------------------------------------------------------------------
+Programa: Cubos Y Cuartas (DO WHILE)
+Entorno: 
+	CONTADOR es numérico entero
+	NUM, CUBO, CUARTA son numéricos reales
+Algoritmo:
+	CONTADOR = 1
+	do
+		escribir "Intoduce número"
+		leer NUM
+		calcular CUBO = NUM^3
+		calcular CUARTA = NUM^4
+		escribir CUBO + "; " + CUARTA
+		CONTADOR++
+	while (CONTADOR < 11)
+
+FinPrograma
+----------------
+Programa: Cubos Y Cuartas (FOR)
+Entorno: 
+	CONTADOR es numérico entero
+	NUM, CUBO, CUARTA son numéricos reales
+Algoritmo:
+	for (CONTADOR = 1 ; CONTADOR < 11 ; CONTADOR++)
+		escribir "Intoduce número"
+		leer NUM
+		calcular CUBO = NUM^3
+		calcular CUARTA = NUM^4
+		escribir CUBO + "; " + CUARTA
+	endfor
+
+FinPrograma
+------------------------------------------------------------------
+Programa: Positivos (DO WHILE)
+Entorno: 
+	CONTADOR es numérico entero
+	NUM es numérico real
+Algoritmo:
+	CONTADOR = 1
+	do
+		escribir "Intoduce número"
+		leer NUM
+		if (NUM%2 == 0)
+			escribir NUM
+		endif
+		CONTADOR++
+	while (CONTADOR < 11)
+
+FinPrograma
+----------------
+Programa: Positivos
+ (FOR)
+Entorno: 
+	CONTADOR es numérico entero
+	NUM es numérico reale
+Algoritmo:
+	for (CONTADOR = 1 ; CONTADOR < 11 ; CONTADOR++)
+		escribir "Intoduce número"
+		leer NUM
+		if (NUM%2 == 0)
+			escribir NUM
+		endif
+	endfor
+
+FinPrograma
+------------------------------------------------------------------
+Programa: Positivos/Negativos/Neutros (DO WHILE)
+Entorno: 
+	CONTADOR, POSITIVO, NEGATIVO, NEUTRO es numérico entero
+	NUM es numérico real
+Algoritmo:
+	CONTADOR = 1
+	do
+		escribir "Intoduce número"
+		leer NUM
+		CONTADOR++
+		if (NUM == 0)
+			NEUTRO++
+		else if (NUM%2 == 0)
+				POSITIVOS++
+			else
+				NEGATIVOS++
+			endif
+		endif
+	while (CONTADOR < 21)
+	escribir "El número de positivos es " POSITIVOS ", de negativos es " NEGATIVOS " y de neutros es " NEUTROS
+
+FinPrograma
+----------------
+Programa: Positivos/Negativos/Neutros (FOR)
+Entorno: 
+	CONTADOR, POSITIVO, NEGATIVO, NEUTRO es numérico entero
+	NUM es numérico reale
+Algoritmo:
+	for (CONTADOR = 1 ; CONTADOR < 21 ; CONTADOR++)
+		escribir "Intoduce número"
+		leer NUM
+		if (NUM == 0)
+			NEUTRO++
+		else if (NUM%2 == 0)
+				POSITIVOS++
+			else
+				NEGATIVOS++
+			endif
+		endif
+	endfor
+	escribir "El número de positivos es " POSITIVOS ", de negativos es " NEGATIVOS " y de neutros es " NEUTROS
+
+FinPrograma
+------------------------------------------------------------------
+Programa: Negativo A Positivo (DO WHILE)
+Entorno: 
+	CONTADOR es numérico entero
+	NUM es numérico real
+Algoritmo:
+	CONTADOR = 1
+	do
+		escribir "Intoduce número negativo"
+		leer NUM
+		NUM = NUM * (-1)
+		escribir NUM
+		CONTADOR++
+	while (CONTADOR < 16)
+
+FinPrograma
+----------------
+Programa: Negativo A Positivo (FOR)
+Entorno: 
+	CONTADOR es numérico entero
+	NUM es numérico reale
+Algoritmo:
+	for (CONTADOR = 1 ; CONTADOR < 16 ; CONTADOR++)
+		escribir "Intoduce número"
+		leer NUM
+		NUM = NUM * (-1)
+		escribir NUM
+	endfor
+
+FinPrograma
+------------------------------------------------------------------
+Programa: Media (DO WHILE)
+Entorno: 
+	CONTADOR es numérico entero
+	MENOR, TOTAL, NOTA, TOTAL, NOTATOTAL, MEDIA es numérico real
+Algoritmo:
+	CONTADOR = 1
+	MENOR = 10
+	TOTAL = 0
+	do
+		escribir "Intoduce nota"
+		leer NOTA
+		if (NOTA < MENOR)
+			MENOR = NOTA
+		endif
+		NOTATOTAL = NOTA + TOTAL
+		TOTAL = NOTATOTAL
+	while (CONTADOR < 41)
+	MEDIA = NOTA / 40
+	escribir "La media es " MEDIA " y la nota más baja es " MENOR
+
+FinPrograma
+----------------
+Programa: Media (FOR)
+Entorno: 
+	CONTADOR es numérico entero
+	MENOR, TOTAL, NOTA, TOTAL, NOTATOTAL, MEDIA es numérico real
+Algoritmo:
+	for (CONTADOR = 1,  MENOR = 10, TOTAL = 0 ; CONTADOR < 41 ; CONTADOR++)
+		escribir "Intoduce nota"
+		leer NOTA
+		if (NOTA < MENOR)
+			MENOR = NOTA
+		endif
+		NOTATOTAL = NOTA + TOTAL
+		TOTAL = NOTATOTAL
+	endfor
+	MEDIA = NOTA / 40
+	escribir "La media es " MEDIA " y la nota más baja es " MENOR
+
+FinPrograma
+------------------------------------------------------------------
+Programa: Media (DO WHILE)
+Entorno: 
+	CONTADOR es numérico entero
+	MENOR, TOTAL, NOTA, TOTAL, NOTATOTAL, MEDIA es numérico real
+Algoritmo:
+	CONTADOR = 1
+	MENOR = 10
+	TOTAL = 0
+	do
+		escribir "Intoduce nota"
+		leer NOTA
+		if (NOTA < MENOR)
+			MENOR = NOTA
+		endif
+		NOTATOTAL = NOTA + TOTAL
+		TOTAL = NOTATOTAL
+	while (CONTADOR < 41)
+	MEDIA = NOTA / 40
+	escribir "La media es " MEDIA " y la nota más baja es " MENOR
+
+FinPrograma
+----------------
+Programa: Media (FOR)
+Entorno: 
+	CONTADOR es numérico entero
+	MENOR, TOTAL, NOTA, TOTAL, NOTATOTAL, MEDIA es numérico real
+Algoritmo:
+	for (CONTADOR = 1,  MENOR = 10, TOTAL = 0 ; CONTADOR < 41 ; CONTADOR++)
+		escribir "Intoduce nota"
+		leer NOTA
+		if (NOTA < MENOR)
+			MENOR = NOTA
+		endif
+		NOTATOTAL = NOTA + TOTAL
+		TOTAL = NOTATOTAL
+	endfor
+	MEDIA = NOTA / 40
+	escribir "La media es " MEDIA " y la nota más baja es " MENOR
+
+FinPrograma
+------------------------------------------------------------------

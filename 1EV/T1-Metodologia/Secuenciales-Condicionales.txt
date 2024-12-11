@@ -1,0 +1,422 @@
+Programa: Comisión
+Entorno: 
+	COMISION1, COMISION2, COMISION3, COMISINES, SUELDO, TOTAL son numéricos reales.
+Algoritmo:
+	escribir "Introduce el sueldo base";
+	leer SUELDO;
+	escribir "Introduce las 3 comisiones, pulsando el enter después de cada una";
+	leer COMISION1, COMISION2, COMISION3;
+	calcular COMISIONES = (COMISION1 + COMISION2 + COMISION3) * 0,1;
+	calcular TOTAL = COMISIONES + BASE;
+	escribir "El total por comisiones que vas a recibir es " + COMISIONES + "€";
+	escribir "El total que recibirá al final de mes es " + TOTAL + "€";
+
+FinPrograma
+
+---------------------------------------------------------
+Programa: Descuento
+Entorno: 
+	COMPRA, TOTAL, DESCUENTO son numéricos reales.
+Algoritmo:
+	DESCUENTO = 15;
+	escribir "Introduce el total de la compra";
+	leer COMPRA;
+	calcular TOTAL = COMPRA * (1 - DESCUENTO/100);
+	escribir "El total que deberá pagar es de " + TOTAL + "€";
+
+FinPrograma
+
+--------------------------------------------------------
+Programa: Descuento2
+Entorno: 
+	PRODUCTO, FINAL, DESCUENTO, TOTAL son numéricos reales.
+Algoritmo:
+	TOTAL = 0;
+	DESCUENTO = 15;
+	PRODUCTO = 1;
+	do 
+		escribir "Escanea un producto. Cuando hayas finalizado, introduce un 0";
+		leer PRODUCTO;
+		calcular TOTAL = TOTAL + PRODUCTO;
+	while (PRODUCTO != 0);
+	calcular TOTALDESC = TOTAL * DESCUENTO/100;
+	calcular FINAL = TOTAL * (1 - DESCUENTO/100);
+	escribir "Se te descontarán " + TOTALDESC + "€";
+	escribir "El total que deberá pagar es de " + FINAL + "€";
+
+FinPrograma
+
+--------------------------------------------------------
+Programa: Nota
+Entorno: 
+	PARCIAL1, PARCIAL2, PARCIAL3, PARCIALES, EXFINAL, POREXFIN, TRABAJO, PORTRABAJO, TOTAL son numéricos reales.
+Algoritmo:
+	escribir "Introduce la nota de los parciales, pulsando enter después de cada uno";
+	leer PARCIAL1, PARCIAL2, PARCIAL3;
+	clalcular PARCIALES = (PARCIAL1 + PARCIAL2 + PARCIAL3) * 0,55;
+
+	escribir "El total de las parciales es " + PARCIALES;
+	escribir "Introduce la nota del examen final";
+	leer EXFINAL;
+	calcular POREXFIN = EXFINAL * 0,30;
+
+	escribir "El total del examen final es " + POREXFIN;
+	escribir "Introduce la nota del trabajo final";
+	leer TRABAJO;
+	calcular PORTRABAJO = TRABAJO * 0,15;
+
+	escribir "El total del trabajo final es " + PORTRABAJO;
+	calcular TOTAL = PARCIALES + POREXFIN + PORTRABAJO;
+	escribir "Tu nota final es " + TOTAL;
+
+FinPrograma
+
+-------------------------------------------------------
+Programa: Alumnos
+Entorno: 
+	HOMBRES, MUJERES, ALUMNOS son numéricos enteros.
+	PORHOM, PORMUJ son numéricos reales.
+Algoritmo:
+	escribir "Introduce el total de hombres";
+	leer HOMBRES;
+	escribir "Introduce el total de mujeres";
+	leer MUJERES;
+	calcular ALUMNOS = HOMBRES + MUJERES;
+	clacular PORHOM = (HOMBRES * 100/ALUMNOS);
+	calcular PORMUJ = (MUJERES * 100/ALUMNOS);
+	escribir "El total de hombres es del " + PORHOM + "%";
+	escribir "El total de mujeres es del " + PORMUJ + "%";
+
+FinPrograma
+
+-------------------------------------------------------
+Programa: Edad
+Entorno: 
+	AÑO1, AÑO2, MES1, MES2, DIA1, DIA2, AÑOS son numéricos enteros.
+Algoritmo:
+	escribir "Introduce tu año, mes y dia de nacimiento, pulsando enter después de cada uno";
+	leer AÑO1, MES1, DIA1;
+	escribir "Introduce el año, mes y dia actual, pulsando enter después de cada uno";
+	leer AÑO2, MES2, DIA2;
+	calcular AÑOS = AÑO2 - AÑO1;
+	if (MES2 > MES1)
+		escribir "Tu edad es " + AÑOS " años";
+	else
+		if (MES2 == MES1)
+			if (DIA2 > DIA1)
+				escribir "Tu edad es " + AÑOS " años";
+			else 
+				AÑOS--;
+				escribir "Tu edad es " + AÑOS " años";
+			endif
+		endif
+	else
+		AÑOS--;
+		escribir "Tu edad es " + AÑOS " años";
+	endif
+		
+FinPrograma
+
+-------------------------------------------------------
+Programa: Bisisesto
+Entorno: 
+	AÑO es numérico entero.
+Algoritmo:
+	escribir "Introduce el año actual";
+	leer AÑO
+	if (AÑO%4 == 0){
+		if (AÑO%100 == 0){
+			if (AÑO%400 == 0){
+				escribir "Es bisiesto"
+			else
+				escribir "No es bisiesto"
+			}
+
+		else
+			escribir "Es bisiesto"
+		}endif
+	else
+		escribir "No es bisiesto"
+	}endif
+		
+FinPrograma-------------------------------------------------------
+Programa: Aprobado
+Entorno: 
+	NOTA1, NOTA2, NOTA3, PROMEDIO son numéricos reales
+Algoritmo:
+	escribir "Introduce el resultado de 3 calificaciones"
+	leer NOTA1, NOTA2, NOTA3
+	calcular PROMEDIO = (NOTA1 + NOTA2 + NOTA3)/3
+	if (PROMEDIO >= 7)
+		escribri "Has aprobado"
+	else
+		escribir "Has suspendido"
+	endif
+		
+FinPrograma
+-------------------------------------------------------
+Programa: Compra
+Entorno: 
+	COMPRA, DESCUENTO son numéricos reales
+Algoritmo:
+	escribir "Introduce el total de tu compra"
+	leer COMPRA
+	if (COMPRA > 1000)
+		calcular DESCUENTO = COMPRA * (1 - 0,2)
+		escribir "Tu compra se queda en " + DESCUENTO
+	else
+		escribir "No se te puede aplicar descuento"
+	endif
+		
+FinPrograma
+-------------------------------------------------------
+Programa: Sueldo
+Entorno: 
+	HORAS, TOTAL, PRIMERAS, SEGUNDAS es numérico entero
+Algoritmo:
+	escribir "Introduce la cantidad de horas trabajadas"
+	leer HORAS
+	if (HORAS <= 40)
+		calcular TOTAL = HORAS * 16
+		escribir "Tu sueldo es " + TOTAL
+	else
+		calcular PRIMERAS = 40 * 16
+		calcular SEGUNDAS = (HORAS - 40) * 20
+		calcular TOTAL = PRIMERAS + SEGUNDAS
+		escribir "Tu sueldo es " + TOTAL
+	endif
+		
+FinPrograma
+-------------------------------------------------------
+Programa: Ascendente
+Entorno: 
+	NUM1, NUM2 son numéricos reales
+Algoritmo:
+	escribir "Introduce dos números"
+	leer NUM1, NUM2
+	if (NUM1 < NUM2)
+		escribir NUM1 + NUM2
+	else if (NUM1 > NUM2)
+		escribir NUM2 + NUM1
+	else
+		escribir "Son iguales"
+	endif
+		
+FinPrograma
+-------------------------------------------------------
+Programa: Calorías
+Entorno: 
+	ACCION, HORAS, MIN, SEG, MINHORA son numéricos enteros
+	MINSEG, TOTAL son numéricos reales
+Algoritmo:
+	escribir "Si estuviste sentado introduce 1. Si estuviste durmeindo introduce 0"
+	leer ACCION
+	if (ACCION == 1)
+		escribir "Cuento tiempo estuviste sentado, introduciendo horas, minutos y segundos"
+		leer HORAS, MIN, SEG
+		calcular MINSEG = SEG / 60
+		calcular MINHORA = HORAS * 60
+		calcular TOTAL = (MINSEG + MINHORA + MIN) * 1,66
+		escribir "El total de calorías consumidas es " + TOTAL
+	else
+		escribir "Cuento tiempo estuviste durmiendo, introduciendo horas, minutos y segundos"
+		leer HORAS, MIN, SEG
+		calcular MINHORA = HORAS * 60
+		calcular TOTAL = (MINSEG + MINHORA + MIN) * 1,66
+		escribir "El total de calorías consumidas es " + TOTAL
+	endif
+
+FinPrograma
+-------------------------------------------------------
+Programa: Producto
+Entorno: 
+	ARTICULO, CLAVE son char
+	PRECIO1, TOTAL son numéricos reales
+Algoritmo:
+	escribir "Introduce el nombre del articulo"
+	leer ARTICULO
+	escribir "Introduce la clave del articulo, siendo estas 01 y 02"
+	leer CLAVE
+	escribir "Introduce el precio del articulo"
+	leer PRECIO1
+	if (CLAVE == '01')
+		calcular TOTAL = PRECIO1 (1 - 0,1)
+		escribir "ARTICULO: \n" + ARTICULO + "CLAVE: \n" + CLAVE + "PRECIO ORIGINAL: \n"
+			  + PRECIO1 + "PRECIO CON DESCUENTO: \n" + DESCUENTO
+	else
+		calcular TOTAL = PRECIO1 (1 - 0,2)
+		escribir "ARTICULO: \n" + ARTICULO + "CLAVE: \n" + CLAVE + "PRECIO ORIGINAL: \n"
+			  + PRECIO1 + "PRECIO CON DESCUENTO: \n" + DESCUENTO
+	endif
+
+FinPrograma
+-------------------------------------------------------
+Programa: Camisas
+Entorno: 
+	CAMISAS es numérico entero
+	PRECIO, TOTAL es numérico real
+Algoritmo:
+	escribir "Introduce el número de camisas compradas"
+	leer CAMISAS
+	escribir "Introduce el precio total"
+	leer PRECIO
+	if (CAMISAS >= 3)
+		calcular TOTAL = PRECIO * (1 - 0,2)
+		escribir "El total de la compra es " + TOTAL
+	else
+		calcular TOTAL = PRECIO * (1 - 0,1)
+		escribir "El total de la compra es " + TOTAL
+	endif
+
+FinPrograma
+-------------------------------------------------------
+Programa: Compra Piezas
+Entorno: 
+	MONTANTE, INVERSION, PRETSAMO, CREDITO, FINCREDITO son numéricos reales
+Algoritmo:
+	escribir "Introduce el montante de la compra"
+	leer MONTANTE
+	if (MONTANTE > 500000)
+		calcular INVERSION = MONTANTE * (1 - 0,55)
+		calcular PRESTAMO = MONTANTE * (1 - 0,3)
+		calcular CREDITO = (MONTANTE * (1 - 0,15))
+		calcular FINCREDITO = CREDITO * (1 - 0,2) + CREDITO
+		escribir "INVERSION: /n" + INVERSION + "PRESTAMO: /n"  + PRESTAMO + "CREDITO: /n" + FINCREDITO
+	else
+		calcular INVERSION = MONTANTE * (1 - 0,7)
+		calcular CREDITO = MONTANTE * (1 - 0,3)
+		calcular FINCREDITO = CREDITO * (1 - 0,2) + CREDITO
+		escribir "INVERSION: /n" + INVERSION + "PRESTAMO: /n"  + PRESTAMO + "CREDITO: /n" + FINCREDITO
+	endif
+
+FinPrograma
+-------------------------------------------------------
+Programa: Números
+Entorno: 
+	NUM1, NUM2, MULTIPLICACION, RESTA, SUMA son numéricos reales
+Algoritmo:
+	escribir "Introduce dos números"
+	leer NUM1, NUM2
+	if (NUM1 == NUM2)
+		calcular MULTIPLICACION = NUM1 * NUM2
+		escribir "MULTIPLICACION: " + MULTIPLICACION
+	else if (NUM1 > NUM2)
+			calcular RESTA = NUM1 - NUM2
+			escribir "RESTA: " + RESTA
+		else
+			calcular SUMA = NUM1 + NUM2
+			escribir "SUMA: " + SUMA
+		endif
+	endif
+
+FinPrograma
+-------------------------------------------------------
+Programa: Mayor
+Entorno: 
+	NUM1, NUM2, NUM3 son numéricos reales
+Algoritmo:
+	escribir "Introduce tres números"
+	leer NUM1, NUM2, NUM3
+	if (NUM1 > NUM2)
+		if (NUM1 > NUM3)
+			escribir "El número mayor es " + NUM1
+		else
+			escribir "El número mayor es " + NUM3
+		endif
+	else if (NUM2 > NUM1)
+		if (NUM2 > NUM3)
+			escribir "El número mayor es " + NUM2
+		else
+			escribir "El número mayor es " + NUM3
+		endif
+	endif
+
+FinPrograma
+-------------------------------------------------------
+Programa: Sueldo Trabajador
+Entorno: 
+	PRECIO, VALOR1, VALOR2, VALOR3, TOTAL1, TOTAL2, TOTAL3 son numéricos reales
+	HORAS es numérico entero
+Algoritmo:
+	escribir "Introduce el valor de la horas"
+	leer PRECIO
+	escribir "Introduce el numero de horas trabajadas"
+	leer HORAS
+	if (HORAS > 40)
+		if (HORAS <= 48)
+			calcular CANTIDAD1 = HORAS - 40
+			calcular VALOR1 = 40 * PRECIO
+			calcular VALOR2 = CANTIDAD1 * (PRECIO * 2)
+			calcular TOTAL2 = VALOR1 + VALOR2
+			escribir "El total a percibir es " + TOTAL2 + "€"
+		else
+			calcular CANTIDAD1 = HORAS - 40
+			calcular CANTIDAD2 = CANTIDAD - 8
+			calcular VALOR1 = 40 * PRECIO
+			calcular VALOR2 = CANTIDAD2 * (PRECIO * 3)
+			calcular VALOR3 = 8 * (PRECIO * 2)
+			calcular TOTAL3 = VALOR1 + VALOR2 + VALOR3
+			escribir "El total a percibir es " + TOTAL3 + "€"
+		endif
+	else
+		calcular TOTAL1 = HORAS * PRECIO1
+		escribir "EL total a precibir es " + TOTAL1 + "€"
+	endif
+
+FinPrograma
+-------------------------------------------------------
+Programa: Bola
+Entorno: 
+	COMPRA, DESCUENTO1, DESCUENTO2, DESCUENTO3 son numéricos reales
+	BOLA es un char
+Algoritmo:
+	escribir "Introduce el valor de la compra"
+	leer COMPRA
+	escribir "Introduce el color de la bola"
+	leer BOLA
+	SWITCH (BOLA)
+		case 'BLANCO':
+			escribir "Mala suerte, no tienes descuento"
+			break;
+		case 'VERDE':
+			calcular DESCUENTO1 = COMPRA * (1 - 0,1)
+			escribir "Se te aplica un 10% de descuento. Pagará " + DESCUENTO1
+			break;
+		case 'AMARILLO':
+			calcular DESCUENTO2 = COMPRA * (1 - 0,25)
+			escribir "Se te aplica un 25% de descuento. Pagará " + DESCUENTO2
+			break;
+		case 'AZUL':
+			calcular DESCUENTO3 = COMPRA * (1 - 0,5)
+			escribir "Se te aplica un 50% de descuento. Pagará " + DESCUENTO3
+			break;
+		case 'ROJO':
+			calcular COMPRA = 0
+			escribir "No paga nada"
+	endswitch
+
+FinPrograma
+-------------------------------------------------------
+Programa: Jubilación
+Entorno: 
+	EDAD, ANTIGUEDAD son numéricos enteros
+Algoritmo:
+	escribir "Introduce tu edad"
+	leer EDAD
+	escribir "Introduce la antigüedad en tu trabajo"
+	leer ANTIGUEDAD
+	if (EDAD >= 60)
+		if (ANTIGUEDAD < 25)
+			escribir "Usted está en la categoría de edad"
+		else
+			escribir "Usted está en la categoría de antigüedad adulta"
+		endif
+	else
+		if (ANTIGUEDAD > 25)
+			escribir "Usted está en la categoría de antigüedad joven"
+		else
+			escribir "Usted no está jubilado"
+		endif
+	endif
+
+FinPrograma
